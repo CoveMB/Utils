@@ -1,0 +1,23 @@
+{
+  "transform": {
+    "^.+\\.(t|j)sx?$": "ts-jest"
+  },
+  "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+  "testEnvironment": "node",
+  "verbose": true,
+  "modulePaths": [
+    "<rootDir>/src/"
+  ],
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/dist/"
+  ],
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "jsx",
+    "json",
+    "node"
+  ]
+}

@@ -29,7 +29,6 @@
   },
   "compileOnSave": true,
   "exclude": [
-    "exercices",
     "node_modules",
     "./dist",
     "./.vscode",

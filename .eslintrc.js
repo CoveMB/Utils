@@ -13,7 +13,8 @@ module.exports = {
   "plugins": [
     "@typescript-eslint",
     "unicorn",
-    "functional"
+    "functional",
+    "jest"
   ],
   "settings": {
     "import/resolver": {
@@ -75,6 +76,7 @@ module.exports = {
   },
   "env": {
     "node": true,
-    "browser": false
+    "browser": false,
+    "jest": true
   },
 };
