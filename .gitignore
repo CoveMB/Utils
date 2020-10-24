@@ -19,3 +19,4 @@ globalConfig.json
 
 
 # Dist typescript compilation folder
+dist
