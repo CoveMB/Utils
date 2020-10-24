@@ -47,6 +47,7 @@ module.exports = {
     "import/group-exports": "off",
     "import/exports-last": "off",
     "import/prefer-default-export": "off",
+    "import/no-unused-modules": "off",
     // Eslint General
     "max-len": [
       "warn",
@@ -65,7 +66,6 @@ module.exports = {
     "no-unused-vars": "off",
     "consistent-return": "off",
     "require-atomic-updates": "off",
-    "no-unused-modules": "off",
     // Typescript
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/naming-convention": "off",
@@ -77,7 +77,7 @@ module.exports = {
   },
   "env": {
     "node": true,
-    "browser": false,
+    "browser": true,
     "jest": true
   },
 };

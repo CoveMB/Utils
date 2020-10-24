@@ -1,3 +1,4 @@
-export const isBrowser = (): boolean => typeof window !== 'undefined';
+export const isBrowser = (): boolean => typeof window !== "undefined";
 
-export const isLocation = (location: string): boolean => isBrowser() && window.location.pathname.includes(location);
+export const isLocation = (locationToCheck: string): boolean =>
+  isBrowser() && window.location.pathname.includes(locationToCheck);
