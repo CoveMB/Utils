@@ -22,6 +22,7 @@
     "test": "jest --config jestconfig.json"
   },
   "dependencies": {
+    "app-module-path": "^2.2.0",
     "fp-ts": "^2.8.4",
     "ramda": "^0.27.1"
   },
