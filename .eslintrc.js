@@ -65,6 +65,7 @@ module.exports = {
     "no-unused-vars": "off",
     "consistent-return": "off",
     "require-atomic-updates": "off",
+    "no-unused-modules": "off",
     // Typescript
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/naming-convention": "off",
