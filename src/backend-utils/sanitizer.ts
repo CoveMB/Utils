@@ -1,4 +1,4 @@
-import { sanitizeObject } from "general-utils";
+import { sanitizeObject } from "../general-utils";
 
 export const sanitizeExposedBody = sanitizeObject([
   "password",
