@@ -1,7 +1,7 @@
+import { flow } from "fp-ts/lib/function";
 import { sanitizeObject } from "../general-utils";
 
-export const sanitizeExposedBody = sanitizeObject([
-  "password",
-  "email",
-  "token",
-]);
+export const sanitizeExposedBody = flow(
+  sanitizeObject(["password", "email", "token"]),
+  JSON.stringify
+);
