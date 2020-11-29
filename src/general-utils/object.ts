@@ -1,10 +1,9 @@
-import { prop, propOr, omit, curryN } from "ramda";
+import { curry, omit, prop, propOr } from "ramda";
 
 export const nameOf = propOr("No name", "name");
 export const idOf = prop("id");
 
-export const sanitizeObject = curryN(
-  2,
+export const sanitizeObject = curry(
   <M extends Record<string, any>>(keysToSanitize: string[], object: M) =>
     omit(keysToSanitize, object)
 );
