@@ -20,3 +20,11 @@ export const pipeAsync = <T, Y = unknown>(...fns: any[]) => (
   input?: Y
 ): Promise<T> =>
   fns.reduce((promise, fn) => promise.then(fn), Promise.resolve(input));
+
+export const transverse = async (
+  functionToExecute: () => Promise<void> | void
+) => async <M>(inputToTransverse: M): Promise<M> => {
+  await functionToExecute();
+
+  return inputToTransverse;
+};
