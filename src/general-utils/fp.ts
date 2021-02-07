@@ -1,6 +1,6 @@
 import * as R from "ramda";
 
-export const debugLog = <M>(value: M): M => {
+export const logDebug = <M>(value: M): M => {
   console.log(value);
 
   return value;
