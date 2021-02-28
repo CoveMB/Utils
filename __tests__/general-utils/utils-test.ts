@@ -1,4 +1,9 @@
-import { getFullDate, idOf, nameOf } from "../../src/general-utils";
+import {
+  getFullDate,
+  idOf,
+  isNumericString,
+  nameOf,
+} from "../../src/general-utils";
 
 test("getFullDate", () => {
   expect(getFullDate().split("/").length).toBe(3);
@@ -14,4 +19,15 @@ test("idOf", () => {
 
   // @ts-ignore
   expect(idOf({ noId: "" })).toBe(undefined);
+});
+
+test("isNumericString", () => {
+  expect(isNumericString("testWrong")).toBe(false);
+  expect(isNumericString("1.1")).toBe(false);
+  expect(isNumericString("1:1")).toBe(false);
+  expect(isNumericString("1,1")).toBe(false);
+  expect(isNumericString("1sd3")).toBe(false);
+  expect(isNumericString("1")).toBe(true);
+  expect(isNumericString("4657678")).toBe(true);
+  expect(isNumericString("-4657678")).toBe(true);
 });
