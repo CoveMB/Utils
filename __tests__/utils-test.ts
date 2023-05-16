@@ -1,9 +1,4 @@
-import {
-  getFullDate,
-  idOf,
-  isNumericString,
-  nameOf,
-} from "../../src/general-utils";
+import { getFullDate, idOf, isNumericString, nameOf } from "../src";
 
 test("getFullDate", () => {
   expect(getFullDate().split("/").length).toBe(3);
@@ -17,7 +12,6 @@ test("nameOf", () => {
 test("idOf", () => {
   expect(idOf({ id: 1 })).toBe(1);
 
-  // @ts-ignore
   expect(idOf({ noId: "" })).toBe(undefined);
 });
 

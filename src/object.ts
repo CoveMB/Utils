@@ -20,3 +20,27 @@ export const readOnly = <M = Record<string, unknown>>(
 
   return Object.freeze(object);
 };
+
+export const isEqualObject = <T extends Record<string, any>>(
+  objectOne: T,
+  objectTwo: T
+): boolean =>
+  Object.entries(objectOne).reduce(
+    (equalityResult, [currentObjectOneKey, keyValueOfObjectOne]) => {
+      if (!equalityResult) {
+        return false;
+      }
+
+      const keyValueOfObjectTwo = objectTwo[currentObjectOneKey];
+
+      if (
+        keyValueOfObjectOne instanceof Object &&
+        keyValueOfObjectTwo instanceof Object
+      ) {
+        return isEqualObject(keyValueOfObjectOne, keyValueOfObjectTwo);
+      }
+
+      return keyValueOfObjectOne === keyValueOfObjectTwo;
+    },
+    true
+  );
