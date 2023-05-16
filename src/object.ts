@@ -11,8 +11,11 @@ export const sanitizeObject = curry(
 export const readOnly = <M = Record<string, unknown>>(
   object: M
 ): Readonly<M> => {
+  // @ts-expect-error
   Object.values(object).forEach((value) => {
-    if (value && typeof value === "object") readOnly(value);
+    if (value && typeof value === "object") {
+      readOnly(value);
+    }
   });
 
   return Object.freeze(object);
